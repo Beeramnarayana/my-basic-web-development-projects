@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="zomato-maincss.css">
+    <link rel="icon" href="https://cdn.siasat.com/wp-content/uploads/2020/01/Zomato-flat-logo.png">
+    </head>
+    <body>
+        <div class="main">
+            <h1><i>Zomato</i></h1>
+        <div class="container">
+            <div class="search">
+                <div id="select">
+                    <img src="https://www.pinclipart.com/picdir/big/363-3639653_location-pin-transparent-location-logo-png-vector-clipart.png" width="15px" heigth="20px">
+                    <p id="selectText">All Restarents</p>
+                    <img src="https://cdn1.iconfinder.com/data/icons/modifiers-add-on-2-glyph/48/Sed-08-512.png" width="15px" height="20px">
+                    <ul id="list">
+                    <li class="options">Agra</li>
+                    <li class="options">Ahmedabad</li>
+                    <li class="options">Ajmer</li>
+                    <li class="options">Alappuuzha NCR</li>
+                    <li class="options">Allahabad</li>
+                    <li class="options">Amaravathi</li>
+                    <li class="options">Amritsar</li>
+                    <li class="options">Aurangabad</li>
+                    <li class="options">Bengaluru</li>
+                    <li class="options">Bhopal</li>
+                    <li class="options">Bhubaneswar</li>
+                    <li class="options">Chandigarth</li>
+                    <li class="options">Chennai</li>
+                    <li class="options">Coimbator</li>
+                    <li class="options">Cuttack</li>
+                    <li class="options">Darjeeling</li>
+                    <li class="options">Dehrahun</li>
+                    <li class="options">Delhi NCR</li>
+                    <li class="options">Dharamshala</li>
+                    <li class="options">Gangtok</li>
+                    <li class="options">Goa</li>
+                    <li class="options">Gorakhpur</li>
+                    <li class="options">Guntur</li>
+                    <li class="options">Guwahati</li>
+                    <li class="options">Gwalior</li>
+                    <li class="options">Haridwar</li>
+                    <li class="options">Hyderabad</li>
+                    <li class="options">Indore</li>
+                    <li class="options">Jabalpur</li>
+                    <li class="options">Juipur</li>
+                    <li class="options">Jalandhar</li>
+                    <li class="options">Jammu</li>
+                    <li class="options">Jumnagar</li>
+                    <li class="options">Jamshedpur</li>
+                    <li class="options">Jhansi</li>
+                    <li class="options">Jodhpur</li>
+                    <li class="options">Junagadh</li>
+                    <li class="options">Kanpur</li>
+                    <li class="options">Khajuraho</li>
+                    <li class="options">Khamgaon</li>
+                    <li class="options">Kharagpur</li>
+                    <li class="options">Kochi</li>
+                    <li class="options">Kolhapur</li>
+                    <li class="options">Kolkata</li>
+                    <li class="options">Kota</li>
+                    <li class="options">Luckonw</li>
+                    <li class="options">Ludhiana</li>
+                    <li class="options">Madurai</li>
+                    <li class="options">Manali</li>
+                    <li class="options">Mangalore</li>
+                    <li class="options">Manipal</li>
+                    <li class="options">Meerut</li>
+                    <li class="options">Mumbai</li>
+                    <li class="options">Mussoorie</li>
+                    <li class="options">Mysore</li>
+                    <li class="options">Nagpur</li>
+                    <li class="options">Nainital</li>
+                    <li class="options">Nashik</li>
+                    <li class="options">Neemrana</li>
+                    <li class="options">ooty</li>
+                    </ul>
+                </div>
+                <div class="vl"></div>
+                <div class="bar">
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png" width="20px" height="20px">
+                </div>
+                <input id="int" type="text" placeholder="search your favourite food">
+            </div>
+       
+        <div class="login">
+            <a href="#">LogIn</a>
+            <a href="#">Sign Up</a>
+        </div>
+        </div>
+        </div>
+        <script>
+           let select=document.getElementById("select");
+          let list=document.getElementById("list");
+          let selectText = document.getElementById("selectText");
+          let int = document.getElementById("int");
+          let options = document.getElementsByClassName("options");
+           
+           select.onclick=function(){
+            list.classList.toggle("open");
+           }
+           for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML=this.innerHTML;
+               int.placeholder="search your favourite food In "+selectText.innerHTML;
+           }
+           }
+        </script>
+        <div class="dinner">
+            <a href="#"><img src="https://www.pngall.com/wp-content/uploads/12/Delivery-Scooter-PNG-Clipart.png"><p>Delivery</p></a>
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/wsd-expenses/512/wsd_expenses_11-1024.png"><p>Dining Out</p></a>
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/raise-the-roof/60/bar-512.png"><p>Night Life</p></a>
+        </div>
+        <hr style="height:1px">
+        <div class="fliter">
+            <div class="fl">
+            <a href="#"><img src="https://static.thenounproject.com/png/220951-200.png" height="10px" width="15px">Fliters</a>
+            </div>
+            <div class="fl">
+            <a href="#">Rating:4.0+</a>
+            </div>
+            <div class="fl">
+            <a href="#">Pure Veg</a>
+            </div>
+            <div class="fl">
+            <a href="#">cuisines<i class="bx bx-chevron-down"></i></a>
+            </div>
+        </div>
+        <div class="middle">
+            <h2>Inspiration For Your First Order</h2>
+            <div class="sin">
+              <div class="single">
+                 <a href="#"><img src="https://i.pinimg.com/originals/ea/39/1d/ea391dd674046cafc64bb85b96b8b5a2.png"><p>pizza</p></a>
+               </div>
+               <div class="single">
+                  <a href="#"><img src="https://i.ytimg.com/vi/MaXYkHE2-gY/maxresdefault.jpg"><p>Cake</p></a>
+                </div>
+                <div class="single">
+                    <a href="#"><img src="https://www.livingbeyond.co.in/wp-content/uploads/2022/03/Chicken-Biryani.png"><p>Biryani</p></a>
+                </div>
+                <div class="single">
+                    <a href="#"><img src="https://img.freepik.com/free-photo/front-view-burger-stand_141793-15542.jpg?w=1800&t=st=1704459082~exp=1704459682~hmac=fc36928634ff04578b620d276d57c623a69e030c809356cf6d02173148bcb85f"><p>Burger</p></a>
+                 </div>
+                <div class="single">
+                    <a href="#"><img src="https://tse2.mm.bing.net/th?id=OIP.jnWvNZTGILmGvkP4j5uDIgHaHV&pid=Api&P=0&h=180"><p>Chicken</p></a>
+                </div>
+                 <div class="single">
+                    <a href="#"><img src="https://tse4.mm.bing.net/th?id=OIP.YiH1cR12ZHi5kmCmp8O8fQHaFO&pid=Api&P=0&h=180"><p>Thali</p></a>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="top">
+                 <h2>Top Brands For You</h2>
+                 <div class="sin">
+                   <div class="single">
+                      <a href="#"><img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png"><p>La Poni'z Pizza</p></a>
+                     </div>
+                    <div class="single">
+                      <a href="#"><img src="https://thebrandinfo.com/wp-content/uploads/2020/10/Bikanervala.jpg"><p>Bikanervala</p></a>
+                    </div>
+                    <div class="single">
+                        <a href="#"><img src="https://wallpaperaccess.com/full/4392572.jpg"><p>Bhagat Halwal</p></a>
+                     </div>
+                     <div class="single">
+                       <a href="#"><img src="http://static3.businessinsider.com/image/57a499f1db5ce91c008b4f33-2400/subway.symbol.8.5.jpg" width="120px" height="120px"><p>Subways</p></a>
+                    </div>
+                    <div class="single">
+                        <a href="#"><img src="https://tse3.mm.bing.net/th?id=OIP.IChBzoLX9o-o4epsdXHDvQHaHa&pid=Api&P=0&h=180"><p>Brijhog Mishthan <br>Bhandar-Brij <br>Rasayanam</p></a>
+                    </div>
+                  </div>
+                 </div>
+                 <hr height="0.5px">
+        <div class="image">
+            <h2 style="margin-left:150px; margin-top:100px">BEST FOOD</h2>
+            <div class="first">
+            <div class="ind">
+                <a href="#"><img src="https://b.zmtcdn.com/data/pictures/1/20890731/69dc10fae46b6e2fab6bd82dcbe8992c.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                <div id="name">
+              <h3>La pino,z Pizza</h3>
+              <p>Pizza,Paste,italian,Fast F...</p>
+              </div>
+              <div id="rating">
+                <h4>4.5 &starf;</h4>
+                <p>₹160 for two</br>1.2 km</p>
+              </div>
+              </a>
+            </div> 
+                <div class="ind">
+                 <a href="#"><img src="https://b.zmtcdn.com/data/pictures/4/3401744/7204a9baa0da69fe46ed83d66736422e.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                    <div id="name">
+                        <h3>The salt cafe & Bar</h3>
+                        <p>Northern India</p>
+                        </div>
+                        <div id="rating">
+                          <h4>4.9 &starf;</h4>
+                          <p>₹1,860 for two</br>
+                            3.8km</p>
+                        </div>
+                    </a>
+                  </div>
+                 <div class="ind">
+                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/2/20724912/fbda97e510de93500b32cb463f743f56.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                        <div id="name">
+                            <h3>Cosmos cafe & Bar</h3>
+                            <p>Continental,North In...</p>
+                            </div>
+                            <div id="rating">
+                              <h4>3.8 &starf;</h4>
+                              <p>₹1,200 for two</br>1.2 km</p>
+                            </div>
+                        </a>
+                    </div>
+                 </div>
+                 <div class="first">
+                    <div class="ind">
+                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/6/3400016/3036a82815339a276905ee006579109b.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                        <div id="name">
+                    <h3>Masala Bistro</h3>
+                    <p>Chinese,North Indian...</p>
+                    </div>
+                    <div id="rating">
+                        <h4>3.7 &starf;</h4>
+                        <p>₹350 for two</br>3.6 km</p>
+                      </div></a>
+                    </div>
+                    <div class="ind">
+                        <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/5/19242495/ae8fc8403c0b5594942b3dcfe26308e2_featured_v2.jpg?output-format=webp">
+                            <div id="name">
+                        <h3>Cafe G Hoilday inn</h3>
+                         <p>Continental,North In...</p></div>
+                         <div id="rating">
+                            <h4>4.4 &starf;</h4>
+                            <p>₹2,400 for two</br>2.8 km</p>
+                          </div></a>
+                        </div>
+                        <div class="ind">
+                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/0/3400580/7de8d0e3dbd92d02cb76d99b72b9dfef_featured_v2.jpg?output-format=webp">
+                                <div id="name">
+                                <h3>Osaia - Radisson hotel</h3>
+                                <p>Continental,North In...</p></div>
+                                <div id="rating">
+                                    <h4>4.0 &starf;</h4>
+                                    <p>₹1,270 for two</br>4.4 km</p>
+                                  </div>
+                                </a>
+                            </div>
+                         </div>
+                         <div class="first">
+                            <div class="ind">
+                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/9/20171939/c00a992b780f6db5dd98bea53e4f956f_o2_featured_v2.jpg">
+                                <div id="name">
+                            <h3>Azuri</h3>
+                            <p>North Indian,chinsese...</p></div>
+                            <div id="rating">
+                                <h4>3.7 &starf;</h4>
+                                <p>₹350 for two</br>2.6 km</p>
+                              </div></a>
+                            </div>
+                            <div class="ind">
+                                <a href="#"><img src="https://b.zmtcdn.com/data/pictures/0/20601060/e206e52abefee0dd8cd31110260f306c_o2_featured_v2.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                                    <div id="name">
+                                <h3>Xero Degrees</h3>
+                                 <p>Cafe,Coffee,Beverages...</p>
+                                 </div>
+                                 <div id="rating">
+                                    <h4>4.4 &starf;</h4>
+                                    <p>₹1000 for two</br>6.7 km</p>
+                                  </div></a>
+                                </div>
+                                <div class="ind">
+                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/0/19374530/05f3ddfae059a3029eb87a369b404855_featured_v2.jpg">
+                                        <div id="name">
+                                        <h3>Nu-cler</h3>
+                                        <p>North Indian,Oriental...</p>
+                                        </div>
+                                        <div id="rating">
+                                            <h4>4.3 &starf;</h4>
+                                            <p>₹2,000 for two</br>1.6 km</p>
+                                          </div>
+                                        </a>
+                                    </div>
+                                 </div>
+                                 <div class="first">
+                                    <div class="ind">
+                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/5/3400325/5cab617cd5d5ab475557bac613eae033_featured_v2.jpg">
+                                        <div id="name">
+                                    <h3>MoMo Cafe-countryyard..</h3>
+                                    <p>North Indian,fast Food...</p>
+                                    </div>
+                                    <div id="rating">
+                                        <h4>4.3 &starf;</h4>
+                                        <p>₹3000 for two</br>4.8 km</p>
+                                      </div></a>
+                                    </div>
+                                    <div class="ind">
+                                        <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/6/19539176/c0d09832bfc55f1b8f599cc0e2024347_featured_v2.jpg">
+                                            <div id="name">
+                                        <h3>ThailWala Pure veg Re...</h3>
+                                         <p>North Indian,chinsese,be..</p></div>
+                                         <div id="rating">
+                                            <h4>3.8 &starf;</h4>
+                                            <p>₹800 for two</br>3.8 km</p>
+                                          </div></a>
+                                        </div>
+                                        <div class="ind">
+                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/5/3401135/1cc72251f7a1966b2bb33ed9d8954380_featured_v2.jpg">
+                                                <div id="name">
+                                                <h3>Pind Balluchi</h3>
+                                                <p>Mughul,North Indian,Agra..</p></div>
+                                                <div id="rating">
+                                                    <h4>3.9 &starf;</h4>
+                                                    <p>₹2,200 for two</br>6.2 km</p>
+                                                  </div>
+                                                </a>
+                                            </div>
+                                         </div>
+                                         <div class="first">
+                                            <div class="ind">
+                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/8/19314048/54c28ba88311237f0d7ab5b08fb854c6_featured_v2.jpg">
+                                                <div id="name">
+                                            <h3>Molecule Air Bar</h3>
+                                            <p>North Indian,chinsese,be..</p></div>
+                                            <div id="rating">
+                                                <h4>4.5 &starf;</h4>
+                                                <p>₹2,400for two</br>5.4 km</p>
+                                              </div></a>
+                                            </div>
+                                            <div class="ind">
+                                                <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/5/3400015/89766caca29bcf54cdd10add52a4213d_featured_v2.jpg">
+                                                    <div id="name">
+                                                <h3>KFC</h3>
+                                                 <p>Burger,Fast Food,Biryani</p></div>
+                                                 <div id="rating">
+                                                    <h4>4.1 &starf;</h4>
+                                                    <p>₹2,000 for two</br>5.2 km</p>
+                                                  </div></a>
+                                                </div>
+                                                <div class="ind">
+                                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/3/20646803/389cc162bcd0432ca4b82cdfc933e9e8.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*">
+                                                        <div id="name">
+                                                        <h3>Daraprakash</h3>
+                                                        <p>South Indian,North Indian</p></div>
+                                                        <div id="rating">
+                                                            <h4>3.5 &starf;</h4>
+                                                            <p>₹400 for two</br>1.2 km</p>
+                                                          </div>
+                                                        </a>
+                                                    </div>
+                                                 </div>
+                                                 <div class="first">
+                                                    <div class="ind">
+                                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/5/20129295/f88da6e66294d057e9050ca356fededc_featured_v2.jpg">
+                                                        <div id="name">
+                                                    <h3>Momocult</h3>
+                                                    <p>Momos,Fast Food,Chinese</p>
+                                                    </div>
+                                                    <div id="rating">
+                                                        <h4>3.9 &starf;</h4>
+                                                        <p>₹600 for two</br>3.2 km</p>
+                                                      </div></a>
+                                                    </div>
+                                                    <div class="ind">
+                                                        <a href="#"><img src="https://b.zmtcdn.com/data/pictures/4/3401194/826f70e91f49c5ec1d0b0d60080c3f2d_featured_v2.jpg">
+                                                            <div id="name">
+                                                        <h3>Djlecious</h3>
+                                                         <p>Bakery,Desserts,Beve...</p></div>
+                                                         <div id="rating">
+                                                            <h4>4.2 &starf;</h4>
+                                                            <p>₹1,800 for two</br>2.7 km</p>
+                                                          </div></a>
+                                                        </div>
+                                                        <div class="ind">
+                                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/6/19312116/1c68f43552381b32bcda05e7e79cf836_featured_v2.jpg">
+                                                                <div id="name">
+                                                                <h3>Beep</h3>
+                                                                <p>North Indian,Chinese,Bev..</p>
+                                                                </div>
+                                                                <div id="rating">
+                                                                    <h4>3.8 &starf;</h4>
+                                                                    <p>₹600 for two</br>1.2 km</p>
+                                                                  </div>
+                                                                </a>
+                                                            </div>
+                                                         </div>
+                                                         <div class="first">
+                                                            <div class="ind">
+                                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/3/20666453/32685449510aca21ff5b255b6a4017d5_featured_v2.jpg">
+                                                                <div id="name">
+                                                            <h3>Drink inn</h3>
+                                                            <p>Fast Food,Bar Food..</p>
+                                                            </div>
+                                                            <div id="rating">
+                                                                <h4>4.9 &starf;</h4>
+                                                                <p>₹3,400 for two</br>5.1 km</p>
+                                                              </div></a>
+                                                            </div>
+                                                            <div class="ind">
+                                                                <a href="#"><img src="https://b.zmtcdn.com/data/pictures/2/3400412/62dab1e10173e8dcd77fa6d7c030f970_featured_v2.jpg">
+                                                                    <div id="name">
+                                                                <h3>North 27</h3>
+                                                                 <p>North Indian,Chinese,Bev..</p>
+                                                                 </div>
+                                                                 <div id="rating">
+                                                                    <h4>4.8 &starf;</h4>
+                                                                    <p>₹1,060 for two</br>3.2 km</p>
+                                                                  </div></a>
+                                                                </div>
+                                                                <div class="ind">
+                                                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/4/20315064/08bc0d9b403bf3f4f7954445451e2883_featured_v2.jpg">
+                                                                        <div id="name">
+                                                                        <h3>Sour N Spicy</h3>
+                                                                        <p>North Indian,Chinese,ser..</p>
+                                                                        </div>
+                                                                        <div id="rating">
+                                                                            <h4>3.7 &starf;</h4>
+                                                                            <p>₹2,800 for two</br>2.4 km</p>
+                                                                          </div>
+                                                                        </a>
+                                                                    </div>
+                                                                 </div>
+                                                                 <div class="first">
+                                                                    <div class="ind">
+                                                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/5/3400105/4dbd5bcbc8a4fb0f759ad29b416164e2_featured_v2.jpg">
+                                                                        <div id="name">
+                                                                    <h3>Pizza hut</h3>
+                                                                    <p>Pizza,Fast Food,Desse..</p></div>
+                                                                    <div id="rating">
+                                                                        <h4>4.6 &starf;</h4>
+                                                                        <p>₹350 for two</br>4.0 km</p>
+                                                                      </div></a>
+                                                                    </div>
+                                                                    <div class="ind">
+                                                                        <a href="#"><img src="https://b.zmtcdn.com/data/pictures/7/3400367/3d41391dcbf10470cd28cba6449e47ac_featured_v2.jpg">
+                                                                            <div id="name">
+                                                                        <h3>Lattice-Grand Mertu..</h3>
+                                                                         <p>North Indian,Continental...</p></div>
+                                                                         <div id="rating">
+                                                                            <h4>4.2 &starf;</h4>
+                                                                            <p>₹3,500 for two</br>4.2 km</p>
+                                                                          </div></a>
+                                                                        </div>
+                                                                        <div class="ind">
+                                                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/chains/1/19461231/e8dea05ca82398e2919ce9b4b6d1a2b6_featured_v2.jpg">
+                                                                                <div id="name">
+                                                                                <h3>Australian Cafe Pizza</h3>
+                                                                                <p>Pizza,Burder,Fast Food</p></div>
+                                                                                <div id="rating">
+                                                                                    <h4>4.6 &starf;</h4>
+                                                                                    <p>₹2,600 for two</br>1.9 km</p>
+                                                                                  </div>
+                                                                                </a>
+                                                                            </div>
+                                                                         </div>
+                                                                         <div class="first">
+                                                                            <div class="ind">
+                                                                            <a href="#"><img src="https://b.zmtcdn.com/data/pictures/9/3400169/18e4a94951c1a33d10ad64eccf1a72c7_featured_v2.jpg">
+                                                                                <div id="name">
+                                                                            <h3>McDonald's</h3>
+                                                                            <p>Burger,Fast Food,Beve..</p></div>
+                                                                            <div id="rating">
+                                                                                <h4>4.9 &starf;</h4>
+                                                                                <p>₹3,400 for two</br>0.5 km</p>
+                                                                              </div></a>
+                                                                            </div>
+                                                                            <div class="ind">
+                                                                                <a href="#"><img src="https://b.zmtcdn.com/data/pictures/3/20666453/32685449510aca21ff5b255b6a4017d5_featured_v2.jpg">
+                                                                                    <div id="name">
+                                                                                <h3>Mama Chicken</h3>
+                                                                                 <p>Chicken,North Indian</p></div>
+                                                                                 <div id="rating">
+                                                                                    <h4>4.3 &starf;</h4>
+                                                                                    <p>₹1600 for two</br>2.6 km</p>
+                                                                                  </div></a>
+                                                                                </div>
+                                                                                <div class="ind">
+                                                                                    <a href="#"><img src="https://b.zmtcdn.com/data/pictures/1/20549041/9a7854ee51d6deb39b171ece1fe639db_featured_v2.jpg">
+                                                                                        <div id="name">
+                                                                                        <h3>Food Adda</h3>
+                                                                                        <p>Pizza,Burger,Sandwich..</p></div>
+                                                                                        <div id="rating">
+                                                                                            <h4>3.7 &starf;</h4>
+                                                                                            <p>₹1,600 for two</br>2.4 km</p>
+                                                                                          </div>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                 </div>
+                                                                                </div>
+                                                                                                                                        
+                                                                                                                         
+                                                                                                                                 <div class="footer">
+                                                                                                                                    <div>
+                                                                                                                                    <h1>Zomata</h1>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="other">
+                                                                                                                                     <div class="about">
+                                                                                                                                      <h5>ABOUT ZOMATO</h5>
+                                                                                                                                        <a href="#">Who We Are</a>
+                                                                                                                                        <a href="#">Blog</a>
+                                                                                                                                        <a href="#">Work With Us</a>
+                                                                                                                                        <a href="#">investor Relations</a>
+                                                                                                                                        <a href="#">Report Fraud</a>
+                                                                                                                                        <a href="#">Press Kit</a>
+                                                                                                                                        <a href="#">coutact Us</a>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="about">
+                                                                                                                                      <h5>ZOMAVERSE</h5>
+                                                                                                                                        <a href="#">Zomato</a>
+                                                                                                                                        <a href="#">Blinkit</a>
+                                                                                                                                        <a href="#">Feeding India</a>
+                                                                                                                                        <a href="#">Hyperpure</a>
+                                                                                                                                        <a href="#">Zomaland</a>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="about">
+                                                                                                                                      <h5>FOR RESTRENTS</h5>
+                                                                                                                                        <a href="#">Partner With Us</a>
+                                                                                                                                        <a href="#">Apps For You</a>
+                                                                                                                                        <h5>FOR ENTERPRISES</h5>
+                                                                                                                                         <a href="#">zomato For Enterprises</a>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="about">
+                                                                                                                                      <h5>LEARN MORE</h5>
+                                                                                                                                        <a href="#">Privacy</a>
+                                                                                                                                        <a href="#">Security</a>
+                                                                                                                                        <a href="#">Terms</a>
+                                                                                                                                        <a href="#">Sitemap</a>
+                                                                                                                                      </div>
+                                                                                                                                      <div class="ot">
+                                                                                                                                        <div class="socialmedia">
+                                                                                                                                             <img src="https://cdn.pixabay.com/photo/2018/01/21/14/36/indian-flag-3096740_1280.png" width="20px" height="15px">India<i class="bx bx-chevron-down"></i>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="socialmedia">
+                                                                                                                                          <img src="https://tse2.mm.bing.net/th?id=OIP.cEN0dGj65rf8QqalTEMLLAHaHv&pid=Api&P=0&h=180" width="20px" height="15px">English<i class="bx bx-chevron-down"></i>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="social">
+                                                                                                                                      <h4>SOCIAL LINKS</h4>
+                                                                                                                                     <a href="https://www.ln.linkedin.com/company/zomato"><i class="bx bxl-linkedin"></i></a>
+                                                                                                                                     <a href="https://www.instagram.com/zomato/"></a><i class="bx bxl-instagram"></i></a>
+                                                                                                                                      <a href="https://twitter.com/zomato"><i class="bx bxl-twitter"></i></a>
+                                                                                                                                      <a href="https://www.youtube.com/zomato"><i class="bx bxl-youtube"></i></a>
+                                                                                                                                      <a href="https://www.facebook.com/zomato"><i class="bx bxl-facebook"></i></a>
+                                                                                                                                     </div>
+                                                                                                                                     <div class="down">
+                                                                                                                                        <img src="C:\Users\beera\Downloads\apple-app-store-travel-awards-globestamp-7.png" usemap="#work" width="150px" height="100px">
+                                                                                                                                        <map name="work">
+                                                                                                                                        <area shape="rect" coords="1115,354,1119,358" href="https://play.google.com/store/apps/details?id=com.application.zomato&_branch_match_id=1271399364596481201&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8pL1ssp0U%2FJL8%2FLyU9M0a3STcxLKcrPTAEABp6kzyEAAAA%3D">
+                                                                                                                                        <area shape="rect" coords=""   href="">
+                                                                                                                                        </map>
+                                                                                                                                     </div>
+                                                                                                                                     </div>
+                                                                                                                                    </div>
+                                                                                                                                    <hr>
+                                                                                                                                    <div class="ooo">
+                                                                                                                                      <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 &copy; Zomato&trade; Ltd. All rights reserved.</p>
+                                                                                                                                    </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        </div>
+    </body>
+</html>
